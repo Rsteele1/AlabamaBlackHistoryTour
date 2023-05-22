@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gnC-4D-iRW">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlabamaBlackHistoryTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="K7j-L2-4In">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="6-4" translatesAutoresizingMaskIntoConstraints="NO" id="vbx-Tx-Kfi">
+                                <rect key="frame" x="-88" y="287" width="661" height="516"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="7-4" translatesAutoresizingMaskIntoConstraints="NO" id="Oif-Gi-Rks">
+                                <rect key="frame" x="9" y="60" width="375" height="219"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Y4D-LS-eVg">
+                                <rect key="frame" x="47" y="287" width="300" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">“Whatever we believe about ourselves and our ability comes true for us.”
+—Susan L. Taylor, journalist</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K7j-L2-4In" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AZD-pj-6v6"/>
+                            <constraint firstItem="K7j-L2-4In" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GEb-Gz-HHv"/>
+                            <constraint firstItem="K7j-L2-4In" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hj9-QF-uZm"/>
+                            <constraint firstAttribute="bottom" secondItem="K7j-L2-4In" secondAttribute="bottom" id="sEx-NE-ghk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="vtg-kv-M1R"/>
+                    <navigationItem key="navigationItem" id="GiH-0I-kcn"/>
+                    <connections>
+                        <outlet property="quoteTextView" destination="Y4D-LS-eVg" id="I0X-Ex-U0h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2077" y="-12"/>
+        </scene>
+        <!--Cities Table View Controller-->
+        <scene sceneID="Nta-l7-kiP">
+            <objects>
+                <tableViewController id="t4F-zu-bS3" customClass="CitiesTableViewController" customModule="AlabamaBlackHistoryTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="zVV-Oa-dGa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="istockphoto-868611498-612x612" id="LEg-an-k6L">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityCell" rowHeight="130" id="oTG-Hp-05a" customClass="CityCell" customModule="AlabamaBlackHistoryTour" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="200" width="393" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oTG-Hp-05a" id="fk1-2s-tqX" customClass="CitiesTableViewCell" customModule="AlabamaBlackHistoryTour" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlF-hH-8Ys">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="130" id="MKq-mx-3nN"/>
+                                            </constraints>
+                                        </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birmingham_al" translatesAutoresizingMaskIntoConstraints="NO" id="GAP-rV-WV7">
+                                            <rect key="frame" x="8" y="8" width="99" height="99"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="99" id="4tN-6C-7cC"/>
+                                                <constraint firstAttribute="width" constant="99" id="eCG-jG-Ilv"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIi-x4-rpr">
+                                            <rect key="frame" x="117" y="10" width="266" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="ZaZ-jI-4Sl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ae3-C4-fl8">
+                                            <rect key="frame" x="117" y="54" width="246" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="04m-PQ-1iI"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ae3-C4-fl8" firstAttribute="leading" secondItem="GAP-rV-WV7" secondAttribute="trailing" constant="10" id="602-Nv-fhu"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ae3-C4-fl8" secondAttribute="trailing" constant="10" id="D7y-vx-UZ2"/>
+                                        <constraint firstItem="hIi-x4-rpr" firstAttribute="leading" secondItem="GAP-rV-WV7" secondAttribute="trailing" constant="10" id="F4u-zo-AnI"/>
+                                        <constraint firstItem="tlF-hH-8Ys" firstAttribute="top" secondItem="fk1-2s-tqX" secondAttribute="top" id="MnQ-ea-7Mo"/>
+                                        <constraint firstItem="Ae3-C4-fl8" firstAttribute="top" secondItem="hIi-x4-rpr" secondAttribute="bottom" constant="10" id="PxE-6F-qYk"/>
+                                        <constraint firstItem="GAP-rV-WV7" firstAttribute="leading" secondItem="fk1-2s-tqX" secondAttribute="leading" constant="8" id="Scf-AY-gL7"/>
+                                        <constraint firstAttribute="bottom" secondItem="tlF-hH-8Ys" secondAttribute="bottom" id="Twc-F9-ncj"/>
+                                        <constraint firstItem="tlF-hH-8Ys" firstAttribute="leading" secondItem="fk1-2s-tqX" secondAttribute="leading" id="Wwl-oE-sLi"/>
+                                        <constraint firstAttribute="trailing" secondItem="hIi-x4-rpr" secondAttribute="trailing" constant="10" id="Yep-6r-dO8"/>
+                                        <constraint firstItem="GAP-rV-WV7" firstAttribute="top" secondItem="fk1-2s-tqX" secondAttribute="top" constant="8" id="nLD-CM-JQM"/>
+                                        <constraint firstAttribute="trailing" secondItem="tlF-hH-8Ys" secondAttribute="trailing" id="oTL-Dc-kd6"/>
+                                        <constraint firstItem="hIi-x4-rpr" firstAttribute="top" secondItem="fk1-2s-tqX" secondAttribute="top" constant="10" id="rZE-1V-KZu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="locationImage" destination="GAP-rV-WV7" id="kgJ-Y8-UFK"/>
+                                    <outlet property="locationLabel" destination="hIi-x4-rpr" id="mrE-9g-GY2"/>
+                                    <outlet property="shortDescriptionLabel" destination="Ae3-C4-fl8" id="TEz-Ij-6Ml"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="t4F-zu-bS3" id="9wi-NL-VGP"/>
+                            <outlet property="delegate" destination="t4F-zu-bS3" id="fi6-GT-2Iq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="i36-Gf-I1D"/>
+                    <connections>
+                        <segue destination="peA-p0-Urc" kind="show" identifier="locationSegue" id="gUl-Oa-gGG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4Z-59-Caw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="701"/>
+        </scene>
+        <!--City Detail View Controller-->
+        <scene sceneID="1sy-dl-OhG">
+            <objects>
+                <viewController id="peA-p0-Urc" customClass="CityDetailViewController" customModule="AlabamaBlackHistoryTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hkz-Zr-mlY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birmingham_al" translatesAutoresizingMaskIntoConstraints="NO" id="oP9-hB-B3p">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="K7e-bs-70b"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="155" id="t2r-49-Zeo"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnf-9F-h8Q" userLabel="red view">
+                                <rect key="frame" x="0.0" y="200" width="393" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVu-wv-RoW">
+                                        <rect key="frame" x="8" y="5" width="377" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.91764706370000004" green="0.20000001789999999" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rs0-0A-JcV"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="fdq-4y-dVt">
+                                <rect key="frame" x="0.0" y="250" width="393" height="602"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLh-8s-ew5">
+                                <rect key="frame" x="20" y="275" width="353" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="S1g-aZ-dx6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHu-4X-sca">
+                                <rect key="frame" x="20" y="329" width="353" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="voo-cg-gp7"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ViX-dW-bqN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pLh-8s-ew5" firstAttribute="leading" secondItem="ViX-dW-bqN" secondAttribute="leading" constant="20" id="3f1-9c-rz2"/>
+                            <constraint firstItem="ViX-dW-bqN" firstAttribute="trailing" secondItem="pLh-8s-ew5" secondAttribute="trailing" constant="20" id="AsW-9e-Okz"/>
+                            <constraint firstItem="nnf-9F-h8Q" firstAttribute="leading" secondItem="ViX-dW-bqN" secondAttribute="leading" id="E2Q-w8-mv3"/>
+                            <constraint firstItem="nnf-9F-h8Q" firstAttribute="trailing" secondItem="ViX-dW-bqN" secondAttribute="trailing" id="E8T-mN-wZy"/>
+                            <constraint firstAttribute="bottom" secondItem="fdq-4y-dVt" secondAttribute="bottom" id="OcL-XV-TzP"/>
+                            <constraint firstItem="fdq-4y-dVt" firstAttribute="top" secondItem="nnf-9F-h8Q" secondAttribute="bottom" id="PGu-np-MyY"/>
+                            <constraint firstItem="nnf-9F-h8Q" firstAttribute="trailing" secondItem="ViX-dW-bqN" secondAttribute="trailing" id="Pcb-39-Tdx"/>
+                            <constraint firstItem="XHu-4X-sca" firstAttribute="top" secondItem="pLh-8s-ew5" secondAttribute="bottom" constant="20" id="UEu-Fh-gwx"/>
+                            <constraint firstItem="nnf-9F-h8Q" firstAttribute="top" secondItem="oP9-hB-B3p" secondAttribute="bottom" id="W75-WN-ABg"/>
+                            <constraint firstItem="ViX-dW-bqN" firstAttribute="trailing" secondItem="XHu-4X-sca" secondAttribute="trailing" constant="20" id="Xrw-Ik-VYv"/>
+                            <constraint firstItem="oP9-hB-B3p" firstAttribute="leading" secondItem="ViX-dW-bqN" secondAttribute="leading" id="Yjv-VZ-wTw"/>
+                            <constraint firstItem="fdq-4y-dVt" firstAttribute="trailing" secondItem="ViX-dW-bqN" secondAttribute="trailing" id="bJa-vf-HxE"/>
+                            <constraint firstItem="fdq-4y-dVt" firstAttribute="leading" secondItem="ViX-dW-bqN" secondAttribute="leading" id="eFX-YK-1rH"/>
+                            <constraint firstItem="fdq-4y-dVt" firstAttribute="trailing" secondItem="ViX-dW-bqN" secondAttribute="trailing" id="hI0-2B-IDw"/>
+                            <constraint firstItem="oP9-hB-B3p" firstAttribute="trailing" secondItem="ViX-dW-bqN" secondAttribute="trailing" id="iaZ-tQ-GyW"/>
+                            <constraint firstItem="pLh-8s-ew5" firstAttribute="top" secondItem="nnf-9F-h8Q" secondAttribute="bottom" constant="25" id="kPK-MH-suf"/>
+                            <constraint firstItem="oP9-hB-B3p" firstAttribute="trailing" secondItem="ViX-dW-bqN" secondAttribute="trailing" id="mlO-U6-92a"/>
+                            <constraint firstItem="nnf-9F-h8Q" firstAttribute="leading" secondItem="ViX-dW-bqN" secondAttribute="leading" id="nwx-ll-xbz"/>
+                            <constraint firstItem="oP9-hB-B3p" firstAttribute="leading" secondItem="ViX-dW-bqN" secondAttribute="leading" id="q25-sV-AxB"/>
+                            <constraint firstItem="nnf-9F-h8Q" firstAttribute="top" secondItem="oP9-hB-B3p" secondAttribute="bottom" id="rbF-I7-nav"/>
+                            <constraint firstItem="fdq-4y-dVt" firstAttribute="leading" secondItem="ViX-dW-bqN" secondAttribute="leading" id="slb-K9-D4M"/>
+                            <constraint firstItem="XHu-4X-sca" firstAttribute="leading" secondItem="ViX-dW-bqN" secondAttribute="leading" constant="20" id="twb-fs-xmA"/>
+                            <constraint firstAttribute="bottom" secondItem="fdq-4y-dVt" secondAttribute="bottom" id="u8g-3l-eMv"/>
+                            <constraint firstItem="oP9-hB-B3p" firstAttribute="top" secondItem="hkz-Zr-mlY" secondAttribute="top" id="x9Q-pa-cLR"/>
+                            <constraint firstItem="oP9-hB-B3p" firstAttribute="top" secondItem="hkz-Zr-mlY" secondAttribute="top" id="zGP-ys-6Xn"/>
+                            <constraint firstItem="fdq-4y-dVt" firstAttribute="top" secondItem="nnf-9F-h8Q" secondAttribute="bottom" id="zJb-ja-hgK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8J7-13-G0q"/>
+                    <connections>
+                        <outlet property="cityDescriptionTextView" destination="XHu-4X-sca" id="Cqs-0G-VTk"/>
+                        <outlet property="cityNameLabel" destination="lVu-wv-RoW" id="2ia-Rd-CLg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bST-J4-9Fd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2885" y="701"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="MmJ-32-G2i">
+            <objects>
+                <viewController id="wIY-e9-TIl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bnc-Fo-dQg" customClass="HisTourViewController" customModule="AlabamaBlackHistoryTour" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="mIh-Xp-utm">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="5-4" translatesAutoresizingMaskIntoConstraints="NO" id="S8i-tQ-AZw">
+                                <rect key="frame" x="-40" y="341" width="529" height="578"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DdP-fj-h0O">
+                                <rect key="frame" x="33" y="80" width="336" height="459"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">When it comes to Black history, Alabama's roots run deep. It was one of the key sttes during the Civil Rights Movement, and many other significant events happened here.  Notably, African Americans in Alabama created the Montgomery Bus Boycott, which was a pivotal moment in the Civil Rights Movement. Additionally Alabama was home to many influential figures, such as Coretta Scott King, and Rosa Parks. These figures helped shape the cultural and political landscape of not only Alabama but the entire United States. </string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QOL-vM-ZDw">
+                                <rect key="frame" x="29" y="556" width="348" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Now that you know a little about our history, take a tour thru the state where moments in black history were made in the sweet state of Alabama.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="clg-Xy-iCe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info" image="info.square.fill" catalog="system" id="PMj-ZW-7wX"/>
+                    <navigationItem key="navigationItem" id="O0K-Kf-nfd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HrQ-pq-7Nc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2799.2366412213742" y="-27.464788732394368"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BM9-z0-i0T">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gnC-4D-iRW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="chY-1c-Rua"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7iD-C6-Pdn">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance"/>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="w5a-If-wCV"/>
+                        <segue destination="lEO-Np-U0u" kind="relationship" relationship="viewControllers" id="fqF-0Y-PJr"/>
+                        <segue destination="Vbu-Rc-FGe" kind="relationship" relationship="viewControllers" id="ra6-wY-jQ2"/>
+                        <segue destination="wIY-e9-TIl" kind="relationship" relationship="viewControllers" id="URb-m7-mPW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CvP-wO-Adi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="-27"/>
+        </scene>
+        <!--Cities-->
+        <scene sceneID="R84-i8-7E7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lEO-Np-U0u" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cities" image="building.2.fill" catalog="system" id="nkd-G3-8HV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PkO-nV-IJk">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="t4F-zu-bS3" kind="relationship" relationship="rootViewController" id="kTf-0j-RV0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUR-gw-RPz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="711"/>
+        </scene>
+        <!--Attraction Collection View Controller-->
+        <scene sceneID="AD6-yC-tMW">
+            <objects>
+                <viewController id="bdE-ac-jfi" customClass="AttractionCollectionViewController" customModule="AlabamaBlackHistoryTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X04-zQ-R8p">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="7BG-dN-Yuo">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="184"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attractions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggy-hG-0od">
+                                <rect key="frame" x="80" y="103" width="227" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Vm-hy-0EY">
+                                <rect key="frame" x="0.0" y="208" width="393" height="644"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="GBY-DF-IKg">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="bdE-ac-jfi" id="V1s-YU-KA3"/>
+                                    <outlet property="delegate" destination="bdE-ac-jfi" id="rEK-u4-ob8"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="APw-Vz-KtS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Aq-YD-c6b"/>
+                    <connections>
+                        <outlet property="collectionView" destination="8Vm-hy-0EY" id="3fZ-eS-Pej"/>
+                        <segue destination="jtF-T7-Yo8" kind="show" identifier="attractionSegue" id="FJh-gH-KZe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2g-pH-Uk3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="1461"/>
+        </scene>
+        <!--Attraction Details View Controller-->
+        <scene sceneID="YQS-uY-lha">
+            <objects>
+                <viewController id="jtF-T7-Yo8" customClass="AttractionDetailsViewController" customModule="AlabamaBlackHistoryTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A2N-Kr-gqE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attraction Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ec-wY-awt">
+                                <rect key="frame" x="98" y="15" width="196" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buffalo soldiers" translatesAutoresizingMaskIntoConstraints="NO" id="ZPb-rL-aBq">
+                                <rect key="frame" x="20" y="103" width="353" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="iYF-ev-c39"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="06F-0R-sTQ">
+                                <rect key="frame" x="20" y="523" width="353" height="226"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fQd-FH-9Rx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="06F-0R-sTQ" firstAttribute="leading" secondItem="fQd-FH-9Rx" secondAttribute="leading" constant="20" id="AHx-aW-6vU"/>
+                            <constraint firstItem="ZPb-rL-aBq" firstAttribute="top" secondItem="fQd-FH-9Rx" secondAttribute="top" id="AiM-PJ-JMA"/>
+                            <constraint firstItem="ZPb-rL-aBq" firstAttribute="leading" secondItem="fQd-FH-9Rx" secondAttribute="leading" constant="20" id="MOc-mw-IAV"/>
+                            <constraint firstItem="06F-0R-sTQ" firstAttribute="top" secondItem="ZPb-rL-aBq" secondAttribute="bottom" constant="20" id="Poq-lP-Opc"/>
+                            <constraint firstItem="fQd-FH-9Rx" firstAttribute="bottom" secondItem="06F-0R-sTQ" secondAttribute="bottom" constant="20" id="UDJ-7d-dwM"/>
+                            <constraint firstItem="fQd-FH-9Rx" firstAttribute="trailing" secondItem="ZPb-rL-aBq" secondAttribute="trailing" constant="20" id="hYN-xQ-ewr"/>
+                            <constraint firstItem="fQd-FH-9Rx" firstAttribute="trailing" secondItem="06F-0R-sTQ" secondAttribute="trailing" constant="20" id="uPc-wA-gTe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fhE-nf-36y"/>
+                    <connections>
+                        <outlet property="attractionDescriptionTextView" destination="06F-0R-sTQ" id="7Rs-Y0-XIu"/>
+                        <outlet property="attractionImageView" destination="ZPb-rL-aBq" id="Rwb-sF-Fqf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Tk-Ov-zMC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2826.7175572519081" y="1486.6197183098593"/>
+        </scene>
+        <!--City Atrractions-->
+        <scene sceneID="uZY-xR-tQb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vbu-Rc-FGe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="City Atrractions" image="map.fill" catalog="system" id="bmc-o7-3v2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RqK-8g-OBK">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bdE-ac-jfi" kind="relationship" relationship="rootViewController" id="4dU-BC-o56"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7WA-IA-ynZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="1487"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2" width="1080" height="1920"/>
+        <image name="5-4" width="500" height="500"/>
+        <image name="6-4" width="500" height="500"/>
+        <image name="7-4" width="500" height="500"/>
+        <image name="birmingham_al" width="540" height="540"/>
+        <image name="buffalo soldiers" width="1000" height="750"/>
+        <image name="building.2.fill" catalog="system" width="128" height="108"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="info.square.fill" catalog="system" width="128" height="114"/>
+        <image name="istockphoto-868611498-612x612" width="612" height="408"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
