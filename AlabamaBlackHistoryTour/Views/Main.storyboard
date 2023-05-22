@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gnC-4D-iRW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gnC-4D-iRW">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -338,20 +339,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="7BG-dN-Yuo">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="7BG-dN-Yuo">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="184"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="L6Y-fr-fWE"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attractions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggy-hG-0od">
-                                <rect key="frame" x="80" y="103" width="227" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attractions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggy-hG-0od">
+                                <rect key="frame" x="20" y="113" width="353" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="DSJ-7y-Et1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Vm-hy-0EY">
-                                <rect key="frame" x="0.0" y="208" width="393" height="644"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Vm-hy-0EY">
+                                <rect key="frame" x="0.0" y="184" width="393" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="GBY-DF-IKg">
                                     <size key="itemSize" width="128" height="128"/>
@@ -361,13 +365,25 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="bdE-ac-jfi" id="V1s-YU-KA3"/>
-                                    <outlet property="delegate" destination="bdE-ac-jfi" id="rEK-u4-ob8"/>
+                                    <outlet property="dataSource" destination="bdE-ac-jfi" id="Ab8-qP-tuy"/>
+                                    <outlet property="delegate" destination="bdE-ac-jfi" id="XVb-PC-xi9"/>
                                 </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="APw-Vz-KtS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Vm-hy-0EY" firstAttribute="trailing" secondItem="APw-Vz-KtS" secondAttribute="trailing" id="1wB-4Z-9jV"/>
+                            <constraint firstItem="7BG-dN-Yuo" firstAttribute="leading" secondItem="APw-Vz-KtS" secondAttribute="leading" id="6RX-Pd-zid"/>
+                            <constraint firstItem="Ggy-hG-0od" firstAttribute="leading" secondItem="APw-Vz-KtS" secondAttribute="leading" constant="20" id="E4w-r0-ZCK"/>
+                            <constraint firstItem="7BG-dN-Yuo" firstAttribute="trailing" secondItem="APw-Vz-KtS" secondAttribute="trailing" id="IEu-mC-x9L"/>
+                            <constraint firstItem="Ggy-hG-0od" firstAttribute="top" secondItem="APw-Vz-KtS" secondAttribute="top" constant="10" id="PBf-bl-hmt"/>
+                            <constraint firstItem="8Vm-hy-0EY" firstAttribute="top" secondItem="7BG-dN-Yuo" secondAttribute="bottom" id="Ue8-nc-AqO"/>
+                            <constraint firstItem="8Vm-hy-0EY" firstAttribute="leading" secondItem="APw-Vz-KtS" secondAttribute="leading" id="Wx0-tc-LDt"/>
+                            <constraint firstItem="7BG-dN-Yuo" firstAttribute="top" secondItem="X04-zQ-R8p" secondAttribute="top" id="eZc-tC-DZz"/>
+                            <constraint firstAttribute="bottom" secondItem="8Vm-hy-0EY" secondAttribute="bottom" id="gei-4m-qZ5"/>
+                            <constraint firstItem="APw-Vz-KtS" firstAttribute="trailing" secondItem="Ggy-hG-0od" secondAttribute="trailing" constant="20" id="jyp-rG-ZUh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2Aq-YD-c6b"/>
                     <connections>
@@ -377,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2g-pH-Uk3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1967" y="1461"/>
+            <point key="canvasLocation" x="1965.6488549618321" y="1460.5633802816901"/>
         </scene>
         <!--Attraction Details View Controller-->
         <scene sceneID="YQS-uY-lha">
